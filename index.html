@@ -1,0 +1,1537 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aysol Logistics - Trusted Logistics, Stronger Supply Chains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --company-name: 'Aysol Logistics';
+            --company-tagline: 'Trusted Logistics, Stronger Supply Chains';
+            --color-primary: #1E293B;
+            --color-primary-light: #A6D2FF;
+            --color-accent: #F93600;
+            --color-background: #FFFFFF;
+            --color-text: #1E293B;
+            --color-text-light: #64748B;
+            --color-white: #FFFFFF;
+            --color-border: #E2E8F0;
+            --font-primary: 'Montserrat', sans-serif;
+            --font-size-base: 1rem;
+            --font-size-sm: 0.95rem;
+            --font-size-lg: 1.1rem;
+            --font-size-xl: 2rem;
+            --font-size-2xl: 2.5rem;
+            --font-size-3xl: 3rem;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 0.75rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 2.5rem;
+            --spacing-3xl: 3rem;
+            --radius-sm: 8px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-primary);
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .language-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-white);
+            border: 2px solid var(--color-accent);
+            border-radius: 25px;
+            padding: 0.4rem;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            overflow: hidden;
+            z-index: 9999;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            min-width: 100px;
+        }
+
+            .language-toggle:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+
+        .language-option {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: transparent;
+            border: none;
+            color: var(--color-accent);
+            z-index: 2;
+            position: relative;
+            min-width: 40px;
+        }
+
+            .language-option.active {
+                color: var(--color-white);
+            }
+
+        .language-slider {
+            position: absolute;
+            top: 0.4rem;
+            left: 0.4rem;
+            width: calc(50% - 0.4rem);
+            height: calc(100% - 0.8rem);
+            background: var(--color-accent);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+            .language-slider.spanish {
+                transform: translateX(100%);
+            }
+
+        .header {
+            background: var(--color-white);
+            padding: 0.5rem 2.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            height: 90px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            height: 85px;
+            padding: 0;
+        }
+
+        .logo-img {
+            height: 85px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+            .nav-menu a {
+                color: var(--color-text);
+                text-decoration: none;
+                font-size: var(--font-size-sm);
+                font-weight: 500;
+                opacity: 0.9;
+                transition: all 0.2s ease;
+                position: relative;
+                white-space: nowrap;
+            }
+
+                .nav-menu a:hover {
+                    opacity: 1;
+                    color: var(--color-accent);
+                }
+
+                .nav-menu a::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: var(--color-accent);
+                    transition: width 0.3s ease;
+                }
+
+                .nav-menu a:hover::after {
+                    width: 100%;
+                }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 10;
+        }
+
+            .menu-toggle span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #000000;
+                border-radius: 3px;
+                transition: all 0.3s ease;
+            }
+
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('logos/photo1.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 2;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--color-accent);
+            z-index: 4;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 3;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        .hero-text {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+            .hero h1 span {
+                color: var(--color-accent);
+                font-family: 'Montserrat', sans-serif;
+            }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .button-primary {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-secondary {
+            background-color: transparent;
+            color: var(--color-white);
+            border: 2px solid var(--color-white);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .button-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+            position: relative;
+        }
+
+            .section-title::after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 3px;
+                background-color: var(--color-accent);
+                margin: var(--spacing-sm) auto 0;
+            }
+
+            .section-title h2 {
+                color: var(--color-primary);
+                font-size: var(--font-size-2xl);
+                margin-bottom: var(--spacing-sm);
+                font-weight: 600;
+            }
+
+            .section-title p {
+                color: var(--color-text-light);
+                font-size: var(--font-size-lg);
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+        .advantages {
+            background-color: #F5F7FA;
+            padding: var(--spacing-3xl) var(--spacing-2xl);
+            margin-top: 0;
+            position: relative;
+        }
+
+            .advantages::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background-color: var(--color-accent);
+            }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-2xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .our-modes {
+            background-color: var(--color-background);
+            padding: var(--spacing-3xl) var(--spacing-2xl);
+            position: relative;
+        }
+
+            .our-modes::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background-color: var(--color-accent);
+            }
+
+        .modes-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: var(--spacing-2xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+            .modes-grid .mode-card:nth-child(1) {
+                grid-column: 1 / 3;
+            }
+
+            .modes-grid .mode-card:nth-child(2) {
+                grid-column: 3 / 5;
+            }
+
+            .modes-grid .mode-card:nth-child(3) {
+                grid-column: 5 / 7;
+            }
+
+            .modes-grid .mode-card:nth-child(4) {
+                grid-column: 2 / 4;
+            }
+
+            .modes-grid .mode-card:nth-child(5) {
+                grid-column: 4 / 6;
+            }
+
+        .mode-icon {
+            margin: 0 auto var(--spacing-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            transition: all 0.3s ease;
+        }
+
+            .mode-icon img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: all 0.3s ease;
+            }
+
+        .mode-card:hover .mode-icon {
+            transform: scale(1.1);
+        }
+
+            .mode-card:hover .mode-icon img {
+                filter: brightness(1.1);
+            }
+
+        .services {
+            padding: var(--spacing-3xl) var(--spacing-2xl);
+            background-color: #F5F7FA;
+            position: relative;
+        }
+
+            .services::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background-color: var(--color-accent);
+            }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-2xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .brands-section {
+            background-color: var(--color-background);
+            padding: var(--spacing-3xl) var(--spacing-2xl);
+            position: relative;
+        }
+
+            .brands-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background-color: var(--color-accent);
+            }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: var(--spacing-xl);
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-md);
+            height: 100px;
+            transition: all 0.3s ease;
+        }
+
+            .brand-logo img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                transition: all 0.3s ease;
+            }
+
+            .brand-logo:hover img {
+                transform: scale(1.1);
+            }
+
+        .service-card, .advantage-card, .mode-card {
+            background: var(--color-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.7);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .service-card::before, .advantage-card::before, .mode-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 4px;
+                height: 100%;
+                background: linear-gradient(to bottom, var(--color-accent) 0%, var(--color-accent) 85%, rgba(249, 54, 0, 0.7) 100%);
+                border-radius: 0 2px 2px 0;
+            }
+
+            .service-card:hover, .advantage-card:hover, .mode-card:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-md);
+                border-color: #000000;
+                position: relative;
+            }
+
+                .service-card:hover::after, .advantage-card:hover::after, .mode-card:hover::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background: linear-gradient(to right, var(--color-primary-light) 0%, var(--color-primary-light) 85%, rgba(166, 210, 255, 0.7) 100%);
+                }
+
+            .service-card h3, .advantage-card h3, .mode-card h3 {
+                color: var(--color-primary);
+                margin-bottom: var(--spacing-lg);
+                font-weight: 600;
+                font-size: var(--font-size-lg);
+                text-align: center;
+                order: 1;
+                width: 100%;
+            }
+
+            .service-card .mode-icon, .advantage-card .mode-icon, .mode-card .mode-icon {
+                order: 2;
+                margin-bottom: var(--spacing-lg);
+            }
+
+            .service-card p, .advantage-card p {
+                color: var(--color-text-light);
+                text-align: center;
+                order: 3;
+                margin: 0;
+                line-height: 1.6;
+            }
+
+        .mode-card {
+            justify-content: center;
+            min-height: 180px;
+        }
+
+            .mode-card h3 {
+                margin-bottom: var(--spacing-md);
+            }
+
+            .mode-card .mode-icon {
+                margin-bottom: 0;
+            }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .about-text {
+            line-height: 1.8;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+            .about-text p {
+                margin-bottom: 2rem;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-text .highlight {
+                text-align: center;
+                font-weight: 700;
+                font-size: 1.3rem;
+                color: var(--color-accent);
+                margin-top: 2.5rem;
+                text-decoration: underline;
+                text-decoration-color: var(--color-primary-light);
+                text-decoration-thickness: 3px;
+                max-width: none;
+            }
+
+        .quick-contact {
+            background-color: var(--color-primary-light);
+            padding: var(--spacing-2xl) var(--spacing-2xl);
+            margin-top: 0;
+            color: var(--color-primary);
+            position: relative;
+        }
+
+            .quick-contact::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: var(--color-accent);
+            }
+
+        .quick-contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-2xl);
+            text-align: center;
+        }
+
+        .contact-item h3 {
+            color: var(--color-primary);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+            .contact-item h3::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 2px;
+                background-color: var(--color-accent);
+            }
+
+        .contact-item p {
+            color: var(--color-text);
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: var(--spacing-2xl) auto 0 auto;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+            .map-container iframe {
+                width: 100%;
+                height: 350px;
+                border: none;
+            }
+
+        section[id] {
+            scroll-margin-top: 90px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex !important;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: var(--color-white);
+                padding: var(--spacing-lg);
+                gap: var(--spacing-md);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                box-shadow: var(--shadow-md);
+            }
+
+                .nav-menu.active {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+            .nav-container {
+                position: relative;
+            }
+
+            .nav-right {
+                gap: 1rem;
+            }
+
+            .language-toggle {
+                bottom: 20px;
+                right: 20px;
+                padding: 0.3rem;
+                min-width: 90px;
+            }
+
+            .language-option {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+                min-width: 35px;
+            }
+
+            .hero {
+                height: 450px;
+            }
+
+            .hero-overlay {
+                background: rgba(0, 0, 0, 0.65);
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .nav-menu li {
+                padding: var(--spacing-xs) 0;
+                text-align: center;
+                border-bottom: 1px solid var(--color-border);
+            }
+
+                .nav-menu li:last-child {
+                    border-bottom: none;
+                }
+
+            .nav-menu a::after {
+                display: none;
+            }
+
+            .logo-img {
+                height: 65px;
+            }
+
+            .button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .menu-toggle.active span:first-child {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:last-child {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+
+            .services-grid, .advantages-grid, .modes-grid, .brands-grid {
+                grid-template-columns: 1fr;
+            }
+
+                .services-grid .service-card {
+                    grid-column: auto;
+                }
+
+                .modes-grid .mode-card:nth-child(1),
+                .modes-grid .mode-card:nth-child(2),
+                .modes-grid .mode-card:nth-child(3),
+                .modes-grid .mode-card:nth-child(4),
+                .modes-grid .mode-card:nth-child(5) {
+                    grid-column: auto;
+                }
+
+            .brands-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--spacing-lg);
+            }
+
+            .brand-logo {
+                height: 80px;
+                padding: var(--spacing-sm);
+            }
+
+            .quick-contact-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .mode-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .about-text {
+                font-size: 1rem;
+                padding: 0;
+            }
+
+                .about-text p {
+                    margin-bottom: 1.5rem;
+                }
+
+                .about-text .highlight {
+                    font-size: 1.1rem;
+                    margin-top: 2rem;
+                }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#home" class="logo-container">
+                <img src="logos/aysol_llc_logo.png" alt="Aysol Logistics" class="logo-img">
+            </a>
+
+            <div class="nav-right">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- English Navigation -->
+            <ul class="nav-menu" id="nav-en">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#advantages">Our Advantages</a></li>
+                <li><a href="#modes">Our Modes</a></li>
+                <li><a href="#services">Specialized Services</a></li>
+                <li><a href="#brands">Trusted By</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+
+            <!-- Spanish Navigation -->
+            <ul class="nav-menu hidden" id="nav-es">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#advantages">Ventajas</a></li>
+                <li><a href="#modes">Modalidades</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#brands">Clientes</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ENGLISH CONTENT -->
+    <div id="content-en">
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Global Logistics Solutions by <span>Aysol</span></h1>
+                    <p>Efficient and Effective Solutions to Move Your Freight 24/7/365.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="button button-primary">Contact Us</a>
+                        <a href="#advantages" class="button button-secondary">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="our-modes">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Building stronger supply chains through trusted partnerships</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At <strong>Aysol</strong>, we are more than just a logistics company, we are your trusted partner in building stronger supply chains. Our mission is simple: to ensure your product reaches the right place, at the right time, every time.</p>
+
+                    <p>We believe that the foundation of great logistics is great relationships. That's why we prioritize personal connections built on <strong>integrity, communication, accountability, and a strong work ethic</strong>. Our growing team is built with like-minded professionals who share these values. People you can rely on when it matters most.</p>
+
+                    <p>Whether you're shipping across the city or across borders, <strong>Aysol stands by your side every step of the way</strong>. From planning and coordination to execution and delivery, we pledge to handle every detail with care and precision so you can focus on growing your business while we take care of the rest.</p>
+
+                    <p class="highlight"><strong>Aysol: Trusted Logistics, Stronger Supply Chains</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages" class="advantages">
+            <div class="section-title">
+                <h2>Our Advantages</h2>
+                <p>Comprehensive solutions for your logistics needs</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <h3>International Logistics Solutions</h3>
+                    <div class="mode-icon">
+                        <img src="logos/intlLogisticsSolutions.svg" alt="International Logistics Solutions" />
+                    </div>
+                </div>
+                <div class="advantage-card">
+                    <h3>Diverse Transport Solutions</h3>
+                    <div class="mode-icon">
+                        <img src="logos/diverseTransportSolutions.svg" alt="Diverse Transport Solutions" />
+                    </div>
+                    <p>Multimodal transportation options for any commodity shipments include FTL, LTL, expedited services, hotshot, specialized equipment, temperature controlled, and HAZMAT.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Enhanced Visibility</h3>
+                    <div class="mode-icon">
+                        <img src="logos/enhancedVisibility.svg" alt="Enhanced Visibility" />
+                    </div>
+                    <p>Our technologies work to streamline your daily responsibilities, improve transparency and communication 24/7/365.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Single Point of Contact</h3>
+                    <div class="mode-icon">
+                        <img src="logos/singlePointOfContact.svg" alt="Single Point of Contact" />
+                    </div>
+                    <p>Simplify your shipping process with a dedicated bilingual representative managing all stages of transportation for a seamless experience.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Warehousing</h3>
+                    <div class="mode-icon">
+                        <img src="logos/warehousing.svg" alt="Warehousing" />
+                    </div>
+                    <p>State-of-the-art warehousing facilities with advanced inventory management systems and security measures.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Customs Clearance</h3>
+                    <div class="mode-icon">
+                        <img src="logos/customsClearance.svg" alt="Customs Clearance" />
+                    </div>
+                    <p>Expert handling of customs documentation and procedures for smooth international shipping.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="modes" class="our-modes">
+            <div class="section-title">
+                <h2>Our Modes</h2>
+                <p>Versatile transportation options for every shipping need</p>
+            </div>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <h3>Dry Van</h3>
+                    <div class="mode-icon">
+                        <img src="logos/dryVan.svg" alt="Dry Van" />
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <h3>Flatbed</h3>
+                    <div class="mode-icon">
+                        <img src="logos/flatbed.svg" alt="Flatbed" />
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <h3>Reefer</h3>
+                    <div class="mode-icon">
+                        <img src="logos/reefer.svg" alt="Reefer" />
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <h3>Box Truck</h3>
+                    <div class="mode-icon">
+                        <img src="logos/boxTruck.svg" alt="Box Truck" />
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <h3>Hotshot</h3>
+                    <div class="mode-icon">
+                        <img src="logos/hotshot.svg" alt="Hotshot" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="section-title">
+                <h2>Specialized Services</h2>
+                <p>Comprehensive logistics solutions for your business</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Partials</h3>
+                    <div class="mode-icon">
+                        <img src="logos/partials.png" alt="Partials" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Hazmat</h3>
+                    <div class="mode-icon">
+                        <img src="logos/hazmat.svg" alt="Hazmat" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Oversized</h3>
+                    <div class="mode-icon">
+                        <img src="logos/oversized.png" alt="Oversized" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Drop Trailer</h3>
+                    <div class="mode-icon">
+                        <img src="logos/dropTrailer.png" alt="Drop Trailer" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Mexico</h3>
+                    <div class="mode-icon">
+                        <img src="logos/mexico.svg" alt="Mexico" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Canada</h3>
+                    <div class="mode-icon">
+                        <img src="logos/canada.svg" alt="Canada" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="brands" class="brands-section">
+            <div class="section-title">
+                <h2>Trusted By</h2>
+                <p>Trusted by industry leaders across various sectors</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-logo">
+                    <img src="logos/tesla.svg" alt="Tesla" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/amazon.svg" alt="Amazon" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/walmart.svg" alt="Walmart" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/homeDepot.svg" alt="Home Depot" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/cocaCola.svg" alt="Coca Cola" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/generalElectric.svg" alt="General Electric" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/nestle.svg" alt="Nestle" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/toyota.svg" alt="Toyota" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/honeywell.svg" alt="Honeywell" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/fedex.svg" alt="FedEx" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/samsung.svg" alt="Samsung" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/johnDeere.svg" alt="John Deere" />
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="quick-contact">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch for all your logistics needs</p>
+            </div>
+            <div class="quick-contact-content">
+                <div class="contact-item">
+                    <h3>Location</h3>
+                    <p>4300 San Francisco</p>
+                    <p>Laredo, TX 78041</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Contact</h3>
+                    <p>Phone: (956) 898-4865</p>
+                    <p>Email: aysol@aysol.net</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Hours</h3>
+                    <p>24/7/365</p>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.7819192329753!2d-99.5031015238532!3d27.538233576279996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86612108271532a5%3A0x5ad2d387c28ff260!2s4300%20San%20Francisco%20Ave%2C%20Laredo%2C%20TX%2078041!5e0!3m2!1sen!2sus!4v1751091759084!5m2!1sen!2sus"
+                        width="100%"
+                        height="350"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </div>
+
+    <!-- SPANISH CONTENT -->
+    <div id="content-es" class="hidden">
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Soluciones Logísticas Globales por <span>Aysol</span></h1>
+                    <p>Soluciones Eficientes y Efectivas para Mover su Carga 24/7/365.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="button button-primary">Contáctanos</a>
+                        <a href="#advantages" class="button button-secondary">Nuestros Servicios</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="our-modes">
+            <div class="section-title">
+                <h2>Acerca de Nosotros</h2>
+                <p>Construyendo cadenas de suministro más fuertes a través de alianzas confiables</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>En <strong>Aysol</strong>, somos más que una empresa de logística, somos su socio confiable en la construcción de cadenas de suministro más fuertes. Nuestra misión es simple: asegurar que su producto llegue al lugar correcto, en el momento correcto, siempre.</p>
+
+                    <p>Creemos que la base de una gran logística son las grandes relaciones. Por eso priorizamos las conexiones personales construidas sobre la <strong>integridad, comunicación, responsabilidad y una fuerte ética de trabajo</strong>. Nuestro equipo en crecimiento está formado por profesionales con ideas afines que comparten estos valores. Personas en las que puede confiar cuando más importa.</p>
+
+                    <p>Ya sea que esté enviando por la ciudad o a través de fronteras, <strong>Aysol está a su lado en cada paso del camino</strong>. Desde la planificación y coordinación hasta la ejecución y entrega, nos comprometemos a manejar cada detalle con cuidado y precisión para que pueda concentrarse en hacer crecer su negocio mientras nosotros nos encargamos del resto.</p>
+
+                    <p class="highlight"><strong>Aysol: Logística Confiable, Cadenas de Suministro Más Fuertes</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages" class="advantages">
+            <div class="section-title">
+                <h2>Nuestras Ventajas</h2>
+                <p>Soluciones integrales para sus necesidades logísticas</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <h3>Soluciones Logísticas Internacionales</h3>
+                    <div class="mode-icon">
+                        <img src="logos/intlLogisticsSolutions.svg" alt="Soluciones Logísticas Internacionales" />
+                    </div>
+                    <p>Soluciones todo en uno que incluyen transporte por carretera, almacenamiento y despacho aduanero en EE.UU., México y Canadá.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Soluciones de Transporte Diversas</h3>
+                    <div class="mode-icon">
+                        <img src="logos/diverseTransportSolutions.svg" alt="Soluciones de Transporte Diversas" />
+                    </div>
+                    <p>Opciones de transporte multimodal para cualquier envío de mercancías incluyendo FTL, LTL, servicios expeditos, hotshot, equipo especializado, temperatura controlada y HAZMAT.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Visibilidad Mejorada</h3>
+                    <div class="mode-icon">
+                        <img src="logos/enhancedVisibility.svg" alt="Visibilidad Mejorada" />
+                    </div>
+                    <p>Nuestras tecnologías trabajan para optimizar sus responsabilidades diarias, mejorar la transparencia y comunicación 24/7/365.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Punto de Contacto Único</h3>
+                    <div class="mode-icon">
+                        <img src="logos/singlePointOfContact.svg" alt="Punto de Contacto Único" />
+                    </div>
+                    <p>Simplifique su proceso de envío con un representante bilingüe dedicado que gestiona todas las etapas del transporte para una experiencia sin problemas.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Almacenamiento</h3>
+                    <div class="mode-icon">
+                        <img src="logos/warehousing.svg" alt="Almacenamiento" />
+                    </div>
+                    <p>Instalaciones de almacenamiento de última generación con sistemas avanzados de gestión de inventarios y medidas de seguridad.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Despacho Aduanero</h3>
+                    <div class="mode-icon">
+                        <img src="logos/customsClearance.svg" alt="Despacho Aduanero" />
+                    </div>
+                    <p>Manejo experto de documentación aduanera y procedimientos para envíos internacionales sin problemas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="modes" class="our-modes">
+            <div class="section-title">
+                <h2>Nuestras Modalidades</h2>
+                <p>Opciones de transporte versátiles para cada necesidad de envío</p>
+            </div>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <h3>Furgón Seco</h3>
+                    <div class="mode-icon">
+                        <img src="logos/dryVan.svg" alt="Furgón Seco" />
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <h3>Plataforma</h3>
+                    <div class="mode-icon">
+                        <img src="logos/flatbed.svg" alt="Plataforma" />
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <h3>Refrigerado</h3>
+                    <div class="mode-icon">
+                        <img src="logos/reefer.svg" alt="Refrigerado" />
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <h3>Camión de Caja</h3>
+                    <div class="mode-icon">
+                        <img src="logos/boxTruck.svg" alt="Camión de Caja" />
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <h3>Hotshot</h3>
+                    <div class="mode-icon">
+                        <img src="logos/hotshot.svg" alt="Hotshot" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="section-title">
+                <h2>Servicios Especializados</h2>
+                <p>Soluciones logísticas integrales para su negocio</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Parciales</h3>
+                    <div class="mode-icon">
+                        <img src="logos/partials.png" alt="Parciales" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Materiales Peligrosos</h3>
+                    <div class="mode-icon">
+                        <img src="logos/hazmat.svg" alt="Materiales Peligrosos" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Sobredimensionado</h3>
+                    <div class="mode-icon">
+                        <img src="logos/oversized.png" alt="Sobredimensionado" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Remolque Desplegable</h3>
+                    <div class="mode-icon">
+                        <img src="logos/dropTrailer.png" alt="Remolque Desplegable" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>México</h3>
+                    <div class="mode-icon">
+                        <img src="logos/mexico.svg" alt="México" />
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>Canadá</h3>
+                    <div class="mode-icon">
+                        <img src="logos/canada.svg" alt="Canadá" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="brands" class="brands-section">
+            <div class="section-title">
+                <h2>Confían en Nosotros</h2>
+                <p>Confianza de líderes de la industria en varios sectores</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-logo">
+                    <img src="logos/tesla.svg" alt="Tesla" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/amazon.svg" alt="Amazon" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/walmart.svg" alt="Walmart" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/homeDepot.svg" alt="Home Depot" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/cocaCola.svg" alt="Coca Cola" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/generalElectric.svg" alt="General Electric" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/nestle.svg" alt="Nestle" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/toyota.svg" alt="Toyota" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/honeywell.svg" alt="Honeywell" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/fedex.svg" alt="FedEx" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/samsung.svg" alt="Samsung" />
+                </div>
+                <div class="brand-logo">
+                    <img src="logos/johnDeere.svg" alt="John Deere" />
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="quick-contact">
+            <div class="section-title">
+                <h2>Contáctanos</h2>
+                <p>Póngase en contacto para todas sus necesidades logísticas</p>
+            </div>
+            <div class="quick-contact-content">
+                <div class="contact-item">
+                    <h3>Ubicación</h3>
+                    <p>4300 San Francisco</p>
+                    <p>Laredo, TX 78041</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Contacto</h3>
+                    <p>Teléfono: (956) 898-4865</p>
+                    <p>Email: aysol@aysol.net</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Horarios</h3>
+                    <p>24/7/365</p>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.7819192329753!2d-99.5031015238532!3d27.538233576279996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86612108271532a5%3A0x5ad2d387c28ff260!2s4300%20San%20Francisco%20Ave%2C%20Laredo%2C%20TX%2078041!5e0!3m2!1ses!2sus!4v1751091759084!5m2!1ses!2sus"
+                        width="100%"
+                        height="350"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </div>
+
+    <!-- Floating Language Toggle -->
+    <div class="language-toggle">
+        <div class="language-slider"></div>
+        <button class="language-option active" data-lang="en">EN</button>
+        <button class="language-option" data-lang="es">ES</button>
+    </div>
+
+    <script>
+        // Language switching functionality
+        let currentLanguage = 'en';
+
+        function switchLanguage(lang) {
+            const enContent = document.getElementById('content-en');
+            const esContent = document.getElementById('content-es');
+            const enNav = document.getElementById('nav-en');
+            const esNav = document.getElementById('nav-es');
+            const slider = document.querySelector('.language-slider');
+            const languageOptions = document.querySelectorAll('.language-option');
+
+            // Update active language option
+            languageOptions.forEach(option => {
+                option.classList.remove('active');
+                if (option.dataset.lang === lang) {
+                    option.classList.add('active');
+                }
+            });
+
+            // Move slider
+            if (lang === 'es') {
+                slider.classList.add('spanish');
+            } else {
+                slider.classList.remove('spanish');
+            }
+
+            // Switch content
+            if (lang === 'es') {
+                enContent.classList.add('hidden');
+                esContent.classList.remove('hidden');
+                enNav.classList.add('hidden');
+                esNav.classList.remove('hidden');
+                document.documentElement.lang = 'es';
+                document.title = 'Aysol Logistics - Logística Confiable, Cadenas de Suministro Más Fuertes';
+            } else {
+                esContent.classList.add('hidden');
+                enContent.classList.remove('hidden');
+                esNav.classList.add('hidden');
+                enNav.classList.remove('hidden');
+                document.documentElement.lang = 'en';
+                document.title = 'Aysol Logistics - Trusted Logistics, Stronger Supply Chains';
+            }
+
+            currentLanguage = lang;
+
+            // Store language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Language toggle event listeners
+        document.querySelectorAll('.language-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = option.dataset.lang;
+                switchLanguage(lang);
+            });
+        });
+
+        // Load preferred language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage && savedLanguage !== currentLanguage) {
+                switchLanguage(savedLanguage);
+            }
+        });
+
+        // Mobile menu functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenus = document.querySelectorAll('.nav-menu');
+
+        menuToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
+
+            // Toggle active menu based on current language
+            const activeNav = currentLanguage === 'en' ? document.getElementById('nav-en') : document.getElementById('nav-es');
+            activeNav.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !e.target.closest('.nav-menu')) {
+                menuToggle.classList.remove('active');
+                navMenus.forEach(nav => nav.classList.remove('active'));
+            }
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenus.forEach(nav => nav.classList.remove('active'));
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href.startsWith('#') && href !== '#') {
+                    e.preventDefault();
+
+                    // Find the target section in the currently visible content
+                    let target;
+                    if (currentLanguage === 'en') {
+                        target = document.querySelector(`#content-en ${href}`);
+                    } else {
+                        target = document.querySelector(`#content-es ${href}`);
+                    }
+
+                    if (target) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -520,6 +520,7 @@
             padding: var(--spacing-md);
             height: 100px;
             transition: all 0.3s ease;
+            overflow: hidden;
         }
 
             .brand-logo img {
@@ -527,6 +528,9 @@
                 max-height: 100%;
                 object-fit: contain;
                 transition: all 0.3s ease;
+                width: auto;
+                height: auto;
+                display: block;
             }
 
             .brand-logo:hover img {
@@ -848,6 +852,8 @@
                 height: 80px;
                 padding: var(--spacing-sm);
                 overflow: hidden;
+                max-width: 100%;
+                box-sizing: border-box;
             }
 
                 .brand-logo img {
@@ -856,6 +862,8 @@
                     object-fit: contain;
                     width: auto;
                     height: auto;
+                    display: block;
+                    margin: 0 auto;
                 }
 
             .quick-contact-content {
